@@ -18,10 +18,14 @@ toggleList.addEventListener('click', () => {
 });
 
 descriptionButton.addEventListener('click', () => {
-  descriptionp.innerHTML = descriptionInput.value + ':';
+  descriptionP.innerHTML = descriptionInput.value + ':';
+  descriptionInput.value = '';
 });
 
 addItemButton.addEventListener('click', () => {
+  let ul = document.getElementsByTagName('ul')[0];
   let li = document.createElement('li');
   li.textContent = addItemInput.value;
+  ul.appendChild(li);
+  addItemInput.value = '';
 });
