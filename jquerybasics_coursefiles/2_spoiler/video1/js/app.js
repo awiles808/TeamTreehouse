@@ -2,9 +2,9 @@
 $('.spoiler').on('click', 'button', function (e){
   console.log(e.target);
      // Show the spoiler text
-  // $('.spoiler span').show();
+  $(this).prev().show();
     // Hide the "Reveal Spoiler" button
-  $(e.target).hide();
+  $(this).hide();
 }) ;
 
 
